@@ -40,85 +40,53 @@ main {
     text-align: center;
 }
 
-/* About Intro */
-.about-intro {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Title and Subheading */
-h2 {
-    font-size: 2.5em;
-    color: #2d3436;
-}
-
-h3 {
-    font-size: 1.8em;
-    margin-top: 40px;
-    color: #2d3436;
-}
-
-/* Mission and Values */
-.mission, .values {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-.mission h3, .values h3 {
-    font-size: 1.5em;
-    color: #2d3436;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Team Section */
-.team {
+/* Product Grid Layout */
+.product-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop view */
+    gap: 20px;
     padding: 20px;
+    max-width: 1200px; /* Constrain the grid width for better centering */
+    margin: 0 auto; /* Center the grid */
 }
 
-.team-member {
+.product {
     background-color: #ffffff;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.team-member h4 {
-    font-size: 1.2em;
-    color: #2d3436;
+.product h3 {
+    font-size: 1.5em;
     margin: 10px 0;
+    color: #2d3436;
 }
 
-.team-member p {
-    color: #777;
-    font-size: 1em;
+.product p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.product .shop-now {
+    display: inline-block;
+    background-color: #0984e3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.product .shop-now:hover {
+    background-color: #74b9ff;
 }
 
 /* Footer Section */
@@ -141,16 +109,16 @@ footer .social-links a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .team {
-        grid-template-columns: 1fr; /* Stack team members vertically on smaller screens */
-    }
-
-    h2, h3 {
-        font-size: 2em; /* Reduce font size for headings on small screens */
-    }
-
-    .about-intro, .mission, .values {
-        padding: 20px; /* Reduce padding on smaller screens */
+    .product-container {
+        grid-template-columns: 1fr 1fr; /* 2-column layout for tablets */
     }
 }
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1-column layout for mobile */
+    }
+}
+
+
 
