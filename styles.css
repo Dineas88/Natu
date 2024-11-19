@@ -91,10 +91,10 @@ h2, h3 {
 }
 
 .team-member img {
-    width: 150px; /* Set the size of the images */
-    height: 150px; /* Keep images square */
-    object-fit: cover; /* Crop the image to fit the container */
-    border-radius: 50%; /* Make images round */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
@@ -146,37 +146,37 @@ h2, h3 {
 
 /* Product Section */
 .product-list {
-    display: grid; /* Use grid instead of flex */
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-items: center; /* Center the items */
+    justify-items: center;
 }
 
 .product-item {
     background-color: white;
-    padding: 15px; /* Reduced padding for a smaller size */
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Full width of the grid cell */
-    max-width: 250px; /* Set max width to control size */
+    width: 100%;
+    max-width: 250px;
     text-align: center;
 }
 
 .product-item img {
-    width: 100%; /* Ensure images are responsive */
+    width: 100%;
     height: auto;
-    max-height: 200px; /* Limit the height */
-    object-fit: cover; /* Crop the image if needed */
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
 .product-item h3 {
-    margin: 10px 0 5px; /* Adjust margin for smaller space */
+    margin: 10px 0 5px;
 }
 
 .product-item p {
     color: #555;
-    font-size: 14px; /* Smaller font for a compact look */
+    font-size: 14px;
 }
 
 .product-item .view-details {
@@ -192,4 +192,35 @@ h2, h3 {
 .product-item .view-details:hover {
     background-color: #333;
     color: white;
+}
+
+/* Modal Section */
+.modal { 
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* Required for close button */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
