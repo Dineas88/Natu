@@ -16,6 +16,7 @@
             <a href="products.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <button onclick="checkout()" class="checkout-btn">Checkout</button> <!-- Added Checkout button here -->
         </nav>
     </header>
 
@@ -72,6 +73,15 @@
             <a href="https://instagram.com/natu" target="_blank">Instagram</a>
         </div>
     </footer>
+
+    <script>
+        // Add your checkout function here if you haven't already
+        function checkout() {
+            alert("Proceeding to checkout...");
+            // You can redirect to your checkout page or payment gateway here
+            window.location.href = "https://paypal.me/natu888"; // Example: Update with your real checkout URL
+        }
+    </script>
 </body>
 </html>
 
