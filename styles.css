@@ -146,46 +146,50 @@ h2, h3 {
 
 /* Product Section */
 .product-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid; /* Use grid instead of flex */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
     gap: 20px;
+    justify-items: center; /* Center the items */
 }
 
 .product-item {
     background-color: white;
-    padding: 20px;
+    padding: 15px; /* Reduced padding for a smaller size */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
+    width: 100%; /* Full width of the grid cell */
+    max-width: 250px; /* Set max width to control size */
     text-align: center;
 }
 
 .product-item img {
-    max-width: 100%;
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    max-height: 200px; /* Limit the height */
+    object-fit: cover; /* Crop the image if needed */
     border-radius: 8px;
 }
 
 .product-item h3 {
-    margin: 20px 0 10px;
+    margin: 10px 0 5px; /* Adjust margin for smaller space */
 }
 
 .product-item p {
     color: #555;
+    font-size: 14px; /* Smaller font for a compact look */
 }
 
 .product-item .view-details {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 10px;
     color: #333;
     background-color: #ff6347;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .product-item .view-details:hover {
     background-color: #333;
     color: white;
 }
-
