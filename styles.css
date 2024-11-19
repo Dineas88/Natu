@@ -72,37 +72,36 @@ h2, h3 {
 }
 
 /* Team Section - About Us */
-.team-section {
+.team {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px; /* Space between the photos */
     margin-top: 40px;
 }
 
-.team-photo {
-    width: 22%; /* Adjust to fit 4 items in a row */
-    height: auto;
+.team-member {
+    width: 23%; /* Adjust width to ensure 4 photos in a row */
+    text-align: center;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.team-photo img {
+.team-member img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 200px; /* Fixed height to maintain same size for all images */
+    object-fit: cover; /* Ensures the image covers the space without distorting */
 }
 
-.team-photo:hover {
-    transform: scale(1.05);
-}
-
-.team-photo p {
-    text-align: center;
-    font-size: 16px;
+.team-member p {
     margin-top: 10px;
+    font-size: 16px;
     color: #555;
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Cart Page */
@@ -232,4 +231,3 @@ h2, h3 {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
