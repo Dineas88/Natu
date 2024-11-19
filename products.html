@@ -28,42 +28,42 @@
                 <h3>Eco-Friendly T-Shirt 1</h3>
                 <p>A comfortable and sustainable T-shirt made from organic cotton.</p>
                 <p><strong>Price:</strong> RM 60</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 1', 'A comfortable and sustainable T-shirt made from organic cotton.', 'RM 60')">Buy Now</button>
             </div>
             <div class="product-item">
                 <img src="images/product2.jpg" alt="Product 2">
                 <h3>Eco-Friendly T-Shirt 2</h3>
                 <p>A stylish, eco-friendly T-shirt perfect for any casual outing.</p>
                 <p><strong>Price:</strong> RM 70</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 2', 'A stylish, eco-friendly T-shirt perfect for any casual outing.', 'RM 70')">Buy Now</button>
             </div>
             <div class="product-item">
                 <img src="images/product3.jpg" alt="Product 3">
                 <h3>Eco-Friendly T-Shirt 3</h3>
                 <p>Crafted from organic materials for ultimate comfort and durability.</p>
                 <p><strong>Price:</strong> RM 75</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 3', 'Crafted from organic materials for ultimate comfort and durability.', 'RM 75')">Buy Now</button>
             </div>
             <div class="product-item">
                 <img src="images/product4.jpg" alt="Product 4">
                 <h3>Eco-Friendly T-Shirt 4</h3>
                 <p>Eco-friendly T-shirt designed for both comfort and style.</p>
                 <p><strong>Price:</strong> RM 65</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 4', 'Eco-friendly T-shirt designed for both comfort and style.', 'RM 65')">Buy Now</button>
             </div>
             <div class="product-item">
                 <img src="images/product5.jpg" alt="Product 5">
                 <h3>Eco-Friendly T-Shirt 5</h3>
                 <p>Made from soft organic cotton, perfect for all-day wear.</p>
                 <p><strong>Price:</strong> RM 80</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 5', 'Made from soft organic cotton, perfect for all-day wear.', 'RM 80')">Buy Now</button>
             </div>
             <div class="product-item">
                 <img src="images/product6.jpg" alt="Product 6">
                 <h3>Eco-Friendly T-Shirt 6</h3>
                 <p>A sustainable and comfortable T-shirt with a modern design.</p>
                 <p><strong>Price:</strong> RM 85</p>
-                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="buyNow('Eco-Friendly T-Shirt 6', 'A sustainable and comfortable T-shirt with a modern design.', 'RM 85')">Buy Now</button>
             </div>
         </section>
     </main>
@@ -76,6 +76,24 @@
             <a href="https://twitter.com/natu" target="_blank">Twitter</a>
         </div>
     </footer>
+
+    <!-- Modal for Product Details -->
+    <div id="product-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-product-name">Product Name</h3>
+            <p id="modal-product-description">Product Description</p>
+            <p><strong>Price:</strong> <span id="modal-product-price"></span></p>
+            <label for="size">Choose Size:</label>
+            <select id="size">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
 </body>
 </html>
 
