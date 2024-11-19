@@ -71,6 +71,40 @@ h2, h3 {
     margin-bottom: 20px;
 }
 
+/* Team Section - About Us */
+.team-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.team-photo {
+    width: 22%; /* Adjust to fit 4 items in a row */
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-photo:hover {
+    transform: scale(1.05);
+}
+
+.team-photo p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
 /* Cart Page */
 .cart-items {
     margin-bottom: 40px;
@@ -198,3 +232,4 @@ h2, h3 {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
