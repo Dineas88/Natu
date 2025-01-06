@@ -24,51 +24,58 @@ function addToCart() {
     };
     cart.push(product);
     alert(`${product.name} (Size: ${product.size}) added to cart!`);
+    updateCart();
     closeModal();
 }
 
-// Function to proceed to checkout
+// Function to update cart display
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    const totalPrice = document.getElementById("total-price");
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - Size: ${item.size} - Price: ${item.price}`;
+        cartItems.appendChild(li);
+
+        total += parseFloat(item.price.replace("RM ", ""));
+    });
+
+    totalPrice.textContent = `Total: RM ${total.toFixed(2)}`;
+}
+
+// Function to checkout
 function checkout() {
     if (cart.length === 0) {
         alert("Your cart is empty!");
         return;
     }
 
-    let total = 0;
     let summary = "Order Summary:\n";
+    let total = 0;
+
     cart.forEach((item, index) => {
-        total += parseFloat(item.price.replace("RM ", ""));
         summary += `${index + 1}. ${item.name} - Size: ${item.size} - Price: ${item.price}\n`;
+        total += parseFloat(item.price.replace("RM ", ""));
     });
+
     summary += `\nTotal: RM ${total.toFixed(2)}`;
     alert(summary);
 
-    // Ask user for payment method
     const paymentMethod = prompt("Choose a payment method:\n1. PayPal\n2. Card");
-
     if (paymentMethod === "1") {
-        // Redirect to PayPal
         alert("Redirecting to PayPal...");
-        window.location.href = "https://paypal.me/natu888"; // Replace with your PayPal link
+        window.location.href = "https://paypal.me/natu888";
     } else if (paymentMethod === "2") {
-        // Redirect to Card Payment
         alert("Redirecting to Card Payment...");
-        window.location.href = "card-payment.html"; // Replace with your card payment page
+        window.location.href = "card-payment.html";
     } else {
         alert("Invalid payment method selected.");
     }
 
-    // Clear cart after checkout
     cart = [];
+    updateCart();
 }
 
-// Event listeners for products
-document.querySelectorAll(".product-item button").forEach((button) => {
-    button.addEventListener("click", () => {
-        const product = button.parentElement;
-        const name = product.querySelector("h3").textContent;
-        const description = product.querySelector("p").textContent;
-        const price = product.querySelector("strong").nextSibling.textContent.trim();
-        buyNow(name, description, price);
-    });
-});
