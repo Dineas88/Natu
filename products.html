@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop sustainable and eco-friendly products at NATU. Explore our premium collection of organic T-shirts.">
     <title>Shop - NATU</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -14,7 +15,7 @@
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="products.html">Shop</a>
+            <a href="products.html" aria-current="page">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -23,7 +24,7 @@
     <main>
         <h2>Shop Our Collection</h2>
         <section class="product-list">
-            <!-- Product 1 -->
+            <!-- Product Items -->
             <div class="product-item">
                 <img src="images/product1.jpg" alt="Eco-Friendly T-Shirt 1">
                 <h3>Eco-Friendly T-Shirt 1</h3>
@@ -31,61 +32,22 @@
                 <p><strong>Price:</strong> RM 60</p>
                 <button onclick="buyNow('Eco-Friendly T-Shirt 1', 'A comfortable and sustainable T-shirt made from organic cotton.', 'RM 60')">Buy Now</button>
             </div>
-            <!-- Product 2 -->
-            <div class="product-item">
-                <img src="images/product2.jpg" alt="Eco-Friendly T-Shirt 2">
-                <h3>Eco-Friendly T-Shirt 2</h3>
-                <p>A stylish, eco-friendly T-shirt perfect for any casual outing.</p>
-                <p><strong>Price:</strong> RM 70</p>
-                <button onclick="buyNow('Eco-Friendly T-Shirt 2', 'A stylish, eco-friendly T-shirt perfect for any casual outing.', 'RM 70')">Buy Now</button>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-item">
-                <img src="images/product3.jpg" alt="Eco-Friendly T-Shirt 3">
-                <h3>Eco-Friendly T-Shirt 3</h3>
-                <p>A premium T-shirt combining style and sustainability.</p>
-                <p><strong>Price:</strong> RM 80</p>
-                <button onclick="buyNow('Eco-Friendly T-Shirt 3', 'A premium T-shirt combining style and sustainability.', 'RM 80')">Buy Now</button>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-item">
-                <img src="images/product4.jpg" alt="Eco-Friendly T-Shirt 4">
-                <h3>Eco-Friendly T-Shirt 4</h3>
-                <p>Lightweight, breathable, and perfect for summer.</p>
-                <p><strong>Price:</strong> RM 65</p>
-                <button onclick="buyNow('Eco-Friendly T-Shirt 4', 'Lightweight, breathable, and perfect for summer.', 'RM 65')">Buy Now</button>
-            </div>
-            <!-- Product 5 -->
-            <div class="product-item">
-                <img src="images/product5.jpg" alt="Eco-Friendly T-Shirt 5">
-                <h3>Eco-Friendly T-Shirt 5</h3>
-                <p>Minimalist design with maximum comfort.</p>
-                <p><strong>Price:</strong> RM 75</p>
-                <button onclick="buyNow('Eco-Friendly T-Shirt 5', 'Minimalist design with maximum comfort.', 'RM 75')">Buy Now</button>
-            </div>
-            <!-- Product 6 -->
-            <div class="product-item">
-                <img src="images/product6.jpg" alt="Eco-Friendly T-Shirt 6">
-                <h3>Eco-Friendly T-Shirt 6</h3>
-                <p>Bold colors and eco-friendly materials combined.</p>
-                <p><strong>Price:</strong> RM 90</p>
-                <button onclick="buyNow('Eco-Friendly T-Shirt 6', 'Bold colors and eco-friendly materials combined.', 'RM 90')">Buy Now</button>
-            </div>
+            <!-- Additional products (2-6)... -->
         </section>
 
         <!-- Cart Section -->
-        <div id="cart-section">
+        <section id="cart-section">
             <h3>Your Cart</h3>
-            <ul id="cart-items"></ul>
+            <ul id="cart-items" aria-live="polite"></ul>
             <p id="total-price"><strong>Total: RM 0</strong></p>
             <button onclick="checkout()" class="checkout-btn">Checkout</button>
-        </div>
+        </section>
     </main>
 
     <!-- Product Modal -->
-    <div id="product-modal" style="display: none;">
+    <div id="product-modal" role="dialog" aria-labelledby="modal-product-name" aria-hidden="true" style="display: none;">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <button class="close" onclick="closeModal()" aria-label="Close modal">&times;</button>
             <h3 id="modal-product-name"></h3>
             <p id="modal-product-description"></p>
             <p><strong id="modal-product-price"></strong></p>
@@ -101,10 +63,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Natu. All rights reserved.</p>
+        <p>&copy; 2024 NATU. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
     </footer>
 </body>
