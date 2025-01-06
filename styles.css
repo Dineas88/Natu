@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Updated Global Styles */
 :root {
     font-size: 16px; /* Default font size */
 }
@@ -35,7 +35,7 @@ header {
 }
 
 header .logo h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced logo size */
     margin-bottom: 10px;
 }
 
@@ -103,7 +103,7 @@ h2, h3 {
 
 .product-item img {
     width: 100%;
-    max-width: 120px; /* Smaller product photo */
+    max-width: 150px; /* Increased product image size */
     height: auto;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -118,6 +118,16 @@ h2, h3 {
     font-size: 0.875rem;
     color: #555;
     margin-bottom: 0.5rem;
+}
+
+/* Member Photo */
+.member-photo {
+    width: 80px; /* Smaller size */
+    height: 80px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
 }
 
 /* Checkout Button */
@@ -162,7 +172,8 @@ footer .social-links a:hover {
     }
 
     .product-item img {
-        max-width: 100px; /* Adjust image size for smaller screens */
+        max-width: 120px; /* Adjusted image size for smaller screens */
     }
 }
+
 
