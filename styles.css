@@ -122,8 +122,8 @@ h2, h3 {
 
 /* Member Photo */
 .member-photo {
-    width: 120px; /* Increased size */
-    height: 120px;
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
     border-radius: 50%; /* Circular shape */
     object-fit: cover;
     margin: 0 auto 1rem;
