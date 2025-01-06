@@ -34,9 +34,8 @@ header {
     text-align: center;
 }
 
-header .logo img {
-    max-width: 120px;
-    height: auto;
+header .logo h1 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -81,9 +80,10 @@ h2, h3 {
 /* Product Section */
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row */
     gap: 1.5rem;
     margin-top: 1.5rem;
+    padding: 0 1rem;
 }
 
 .product-item {
@@ -93,25 +93,19 @@ h2, h3 {
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-/* Team Section */
-.team-member {
-    text-align: center;
-    padding: 1rem;
+.product-item:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.team-member p {
-    font-size: 0.875rem;
-    color: #333;
+.product-item img {
+    width: 100%;
+    max-width: 150px; /* Smaller product photo */
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -142,4 +136,9 @@ footer .social-links a:hover {
     .checkout-btn {
         margin-top: 1rem;
     }
+
+    .product-list {
+        grid-template-columns: 1fr; /* 1 product per row on smaller screens */
+    }
 }
+
