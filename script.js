@@ -33,6 +33,7 @@ function checkout() {
         alert("Your cart is empty!");
         return;
     }
+
     let total = 0;
     let summary = "Order Summary:\n";
     cart.forEach((item, index) => {
@@ -41,11 +42,24 @@ function checkout() {
     });
     summary += `\nTotal: RM ${total.toFixed(2)}`;
     alert(summary);
-    cart = []; // Clear cart after checkout
 
-    // Redirect to payment page
-    alert("Redirecting to payment...");
-    window.location.href = "https://paypal.me/natu888"; // Update with your payment link
+    // Ask user for payment method
+    const paymentMethod = prompt("Choose a payment method:\n1. PayPal\n2. Card");
+
+    if (paymentMethod === "1") {
+        // Redirect to PayPal
+        alert("Redirecting to PayPal...");
+        window.location.href = "https://paypal.me/natu888"; // Replace with your PayPal link
+    } else if (paymentMethod === "2") {
+        // Redirect to Card Payment
+        alert("Redirecting to Card Payment...");
+        window.location.href = "card-payment.html"; // Replace with your card payment page
+    } else {
+        alert("Invalid payment method selected.");
+    }
+
+    // Clear cart after checkout
+    cart = [];
 }
 
 // Event listeners for products
