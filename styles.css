@@ -184,8 +184,8 @@ img {
 }
 
 .member img {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Smaller size */
+    height: 80px; /* Smaller size */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -193,7 +193,7 @@ img {
 }
 
 .member img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2); /* Slightly larger hover effect for better interaction */
 }
 
 .member p {
@@ -276,4 +276,3 @@ img {
         flex-direction: column;
     }
 }
-
