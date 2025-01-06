@@ -1,4 +1,4 @@
-/* Updated Global Styles */
+/* Global Styles */
 :root {
     font-size: 16px; /* Default font size */
 }
@@ -35,7 +35,7 @@ header {
 }
 
 header .logo h1 {
-    font-size: 1.2rem; /* Reduced logo size */
+    font-size: 2rem; /* Increased logo size */
     margin-bottom: 10px;
 }
 
@@ -122,8 +122,8 @@ h2, h3 {
 
 /* Member Photo */
 .member-photo {
-    width: 80px; /* Smaller size */
-    height: 80px;
+    width: 120px; /* Increased size */
+    height: 120px;
     border-radius: 50%; /* Circular shape */
     object-fit: cover;
     margin: 0 auto 1rem;
@@ -175,5 +175,3 @@ footer .social-links a:hover {
         max-width: 120px; /* Adjusted image size for smaller screens */
     }
 }
-
-
